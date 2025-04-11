@@ -120,13 +120,13 @@ body {
     .header__text__introduction {
         margin-top: 12%;
         margin-right: 3%;
-        font-size: 150%;
+        font-size: 165%;
     }
 
     .header__text__description {
-        margin-top: 27%;
+        margin-top: 28%;
         margin-right: 3%;
-        font-size: 62.5%;
+        font-size: 69%;
     }
 
 }
