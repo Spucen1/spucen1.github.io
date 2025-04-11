@@ -49,6 +49,18 @@ body {
     position: relative;
 }
 
+.grey {
+    color: var(--grey-text);
+}
+
+.white {
+    color: var(--main-text);
+}
+
+.orange {
+    color: var(--orange-text);
+}
+
 .header__text__introduction {
     position: absolute;
     right: 0;
@@ -57,12 +69,12 @@ body {
     font-family: 'JetBrains Mono',monospace;
 }
 
-.grey {
+.header__text__description {
+    position: absolute;
+    right: 0;
+    z-index: 2;
     color: var(--grey-text);
-}
-
-.white {
-    color: var(--main-text);
+    font-family: 'JetBrains Mono',monospace;
 }
 
 @media screen and (max-width: 768px) {
@@ -106,9 +118,15 @@ body {
     }
 
     .header__text__introduction {
-        margin-top: 10%;
+        margin-top: 12%;
         margin-right: 3%;
         font-size: 150%;
+    }
+
+    .header__text__description {
+        margin-top: 27%;
+        margin-right: 3%;
+        font-size: 62.5%;
     }
 
 }
