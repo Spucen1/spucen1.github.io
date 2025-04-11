@@ -60,6 +60,14 @@ body {
     font-size: 150%;
 }
 
+.grey {
+    color: var(--grey-text);
+}
+
+.white {
+    color: var(--main-text);
+}
+
 
 
 @media screen and (max-width: 768px) {
