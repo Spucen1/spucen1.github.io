@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-    height: max-content;
+    height: auto;
     position: relative;
 }
 
@@ -42,7 +42,26 @@ body {
 
 .header__img {
     position: absolute;
+    z-index: 1;
 }
+
+.header__text {
+    position: relative;
+}
+
+.header__text__introduction {
+    position: absolute;
+    right: 0;
+    margin-top: 10%;
+    margin-right: 3%;
+    z-index: 2;
+    color: var(--orange-text);
+    font-family: 'JetBrains Mono',monospace;
+    font-size: 150%;
+}
+
+
+
 @media screen and (max-width: 768px) {
     .menu__list {
         margin-top: 3%;
