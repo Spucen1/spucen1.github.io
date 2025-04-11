@@ -2,6 +2,7 @@
     --main-text: #F4F4F4;
     --orange-text: #DF6012;
     --grey-text: #A6A6A6;
+    --dark-grey: #2F2F2F;
 }
 
 @font-face {
@@ -11,6 +12,11 @@
 
 body {
     background-color: black;
+}
+
+.header {
+    height: max-content;
+    position: relative;
 }
 
 .menu__list {
@@ -32,6 +38,10 @@ body {
 
 .menu__list__home {
     text-decoration: underline;
+}
+
+.header__img {
+    position: absolute;
 }
 @media screen and (max-width: 768px) {
     .menu__list {
@@ -62,6 +72,15 @@ body {
         left: 0;
         transform: translateX(-12%);
         transform-origin: center;
+    }
+
+    .header__img {
+        top: 0;
+        left: 0;
+        width: 60%;
+        margin-top: 15%;
+        padding-top: 60%;
+        background-color: var(--dark-grey);
     }
 
 }
