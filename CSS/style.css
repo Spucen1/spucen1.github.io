@@ -12,6 +12,9 @@
 
 body {
     background-color: black;
+    -webkit-font-smoothing: antialiased; /* Improves font rendering on macOS */
+    -moz-osx-font-smoothing: grayscale; /* Improves font rendering on macOS */
+    text-rendering: optimizeLegibility; /* Enhances readability */
 }
 
 .header {
