@@ -41,7 +41,7 @@ body {
     }
 
     .menu__list a {
-        font-size: 80%;
+        font-size: 100%;
     }
 
     .menu__list__home {
@@ -73,6 +73,18 @@ body {
 
     .menu__list__home {
         position: relative;
+    }
+
+    .menu__list__home::after {
+        content: '';
+        position: absolute;
+        width: 130%;
+        height: 10%;
+        background-color: var(--main-text);
+        bottom: -2px;
+        left: 0;
+        transform: translateX(-12%);
+        transform-origin: center;
     }
     
 }
