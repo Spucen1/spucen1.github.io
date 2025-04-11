@@ -18,7 +18,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 5%;
+    gap: 6%;
 }
 
 .menu__list li {
@@ -36,15 +36,15 @@ body {
 }
 @media screen and (max-width: 768px) {
     .menu__list {
-        margin-top: 2%;
-        margin-right: 5%;
+        margin-top: 3%;
+        margin-right: 6%;
     }
 
     .menu__list li {
     }
 
     .menu__list a {
-        font-size: 70%;
+        font-size: 80%;
     }
 
     .menu__list__home {
