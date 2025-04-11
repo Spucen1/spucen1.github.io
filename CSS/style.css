@@ -44,6 +44,10 @@ body {
         font-size: 80%;
     }
 
+    .menu__list a:hover {
+        color: var(--orange-text);
+    }
+
     .menu__list__home {
         position: relative;
     }
@@ -64,11 +68,17 @@ body {
 
 @media screen and (min-width: 769px) {
     .menu__list {
-        margin-right: 10%;
+        margin-top: 1%;
+        margin-right: 2%;
+        gap: 2%;
     }
 
     .menu__list a {
         font-size: 100%;
+    }
+
+    .menu__list a:hover {
+        color: var(--orange-text);
     }
 
     .menu__list__home {
