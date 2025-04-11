@@ -52,3 +52,22 @@ body {
     }
 
 }
+
+@media screen and (min-width: 769px) {
+    .menu__list {
+        margin-right: 10%;
+    }
+
+    .menu__list li {
+        margin: 0 2%;
+    }
+
+    .menu__list a {
+        font-size: 100%;
+    }
+
+    .menu__list__home {
+        text-decoration: underline;
+    }
+    
+}
