@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('../font/JetBrainsMono-Regular.woff2') format('woff2');
+    src: url('font/JetBrainsMono-Regular.woff2') format('woff2');
 }
 
 body {
