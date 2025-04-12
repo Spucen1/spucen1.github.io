@@ -451,6 +451,16 @@ body {
         font-weight: 200;
     }
 
+    .footer__credits__text {
+        font-size: 4vw;
+        font-weight: 200;
+    }
+
+    .footer__credits__font {
+        font-size: 4vw;
+        font-weight: 200;
+    }
+
     .footer__meme {
         margin-right: 10%;
         margin-top: 7%;
