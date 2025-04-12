@@ -2,6 +2,7 @@
     --main-text: #F4F4F4;
     --orange-text: #DF6012;
     --grey-text: #A6A6A6;
+    --semidark-grey: #5f5f5f;
     --dark-grey: #2F2F2F;
     --darkest-grey: #111111;
 
@@ -102,6 +103,11 @@ body {
     color: var(--grey-text);
 }
 
+.about__text__line {
+    background-color: var(--semidark-grey);
+    margin: 0;
+}
+
 .tools__title {
     color: var(--orange-text);
 }
@@ -114,6 +120,16 @@ body {
     align-items: top;
 }
 
+.tools__show__ps__text,
+.tools__show__ai__text,
+.tools__show__html__text,
+.tools__show__aud__text,
+.tools__show__ble__text,
+.tools__show__fig__text {
+    margin: 0;
+    color: var(--main-text);
+}
+
 .learning__title {
     color: var(--orange-text);
 }
@@ -124,6 +140,13 @@ body {
     flex-wrap: wrap;
     justify-content: left;
     align-items: top;
+}
+
+.learning__show__py__text,
+.learning__show__js__text,
+.learning__show__id__text {
+    margin: 0;
+    color: var(--main-text);
 }
 
 .footer {
@@ -144,6 +167,11 @@ body {
 .contact__github {
     color: var(--grey-text);
     text-decoration: none;
+}
+
+.contact__mail {
+    margin: 0;
+    color: var(--grey-text);
 }
 
 .footer__line {
@@ -168,8 +196,12 @@ body {
 
 .footer__meme {
     margin: 0;
-    color: var(--grey-text);
+    color: var(--semidark-grey);
     text-align: end;
+}
+
+.idk {
+    color: violet;
 }
 
 @media screen and (max-width: 768px) {
@@ -239,6 +271,25 @@ body {
         font-weight: 400;
     }
 
+    .about {
+        margin-top: 10%;
+    }
+
+    .about__text {
+        margin: 0;
+        margin-left: 6%;
+        margin-right: 6%;
+        color: var(--main-text);
+        font-size: 3.8vw;
+        font-weight: 200;
+    }
+
+    .about__text__line {
+        height: 1px;
+        margin-top: 2%;
+        margin-bottom: 4%;
+    }
+
     .tools {
         margin-top: 30%;
     }
@@ -249,7 +300,7 @@ body {
         font-weight: 400;
         margin-left: 13%;
     }
-
+    
     
     .tools__show { 
         width: 80%;
@@ -259,17 +310,20 @@ body {
         gap: 7%;
     }
     
-    .tools__show__ps__img {
-        width: 8vw;
-        height: auto;
-    }
-    
-    .tools__show__ps__text {
-        margin: 0;
-        color: var(--main-text);
+    .tools__show__ps__text,
+    .tools__show__ai__text,
+    .tools__show__html__text,
+    .tools__show__aud__text,
+    .tools__show__ble__text,
+    .tools__show__fig__text {
         font-size: 5vw;
         font-weight: 200;
         line-height: 140%;
+    }
+    
+    .tools__show__ps__img {
+        width: 8vw;
+        height: auto;
     }
     
     .tools__show__ai__img {
@@ -277,30 +331,14 @@ body {
         height: auto;
     }
     
-    .tools__show__ai__text {
-        margin: 0;
-        color: var(--main-text);
-        font-size: 5vw;
-        font-weight: 200;
-        line-height: 140%;
-    }
-    
     .tools__show__html {
-        width: 28vw;
+        width: 27vw;
         margin-top: 5%;
     }
     
     .tools__show__html__img {
         width: 13vw;
         height: auto;
-    }
-    
-    .tools__show__html__text {
-        margin: 0;
-        color: var(--main-text);
-        font-size: 5vw;
-        font-weight: 200;
-        line-height: 140%;
     }
     
     .tools__show__aud {
@@ -312,29 +350,23 @@ body {
         height: auto;
     }
     
-    .tools__show__aud__text {
-        margin: 0;
-        color: var(--main-text);
-        font-size: 5vw;
-        font-weight: 200;
-        line-height: 140%;
-    }
-    
     .tools__show__ble {
+        width: 27vw;
         margin-top: 5%;
     }
     
     .tools__show__ble__img {
-        width: 9vw;
-        height: auto;
+        width: auto;
+        height: 8vw;
     }
-    
-    .tools__show__ble__text {
-        margin: 0;
-        color: var(--main-text);
-        font-size: 5vw;
-        font-weight: 200;
-        line-height: 140%;
+
+    .tools__show__fig {
+        margin-top: 5%;
+    }
+
+    .tools__show__fig__img {
+        width: auto;
+        height: 8vw;
     }
 
     .learning {
@@ -356,6 +388,14 @@ body {
         gap: 7%;
     }
 
+    .learning__show__py__text,
+    .learning__show__js__text,
+    .learning__show__id__text {
+        font-size: 5vw;
+        font-weight: 200;
+        line-height: 140%;
+    }
+
     .learning__show__py {
         width: 28vw;
     }
@@ -363,14 +403,6 @@ body {
     .learning__show__py__img {
         width: 8vw;
         height: auto;
-    }
-
-    .learning__show__py__text {
-        margin: 0;
-        color: var(--main-text);
-        font-size: 5vw;
-        font-weight: 200;
-        line-height: 140%;
     }
 
     .learning__show__js {
@@ -382,14 +414,6 @@ body {
         height: auto;
     }
 
-    .learning__show__js__text {
-        margin: 0;
-        color: var(--main-text);
-        font-size: 5vw;
-        font-weight: 200;
-        line-height: 140%;
-    }
-
     .learning__show__id {
         width: 28vw;
         margin-top: 5%;
@@ -398,14 +422,6 @@ body {
     .learning__show__id__img {
         width: 8vw;
         height: auto;
-    }
-
-    .learning__show__id__text {
-        margin: 0;
-        color: var(--main-text);
-        font-size: 5vw;
-        font-weight: 200;
-        line-height: 140%;
     }
 
     .footer {
@@ -419,20 +435,14 @@ body {
         gap: 7%;
     }
 
-    .contact__contact {
-        font-size: 4vw;
-        font-weight: 200;
-    }
-
+    .contact__contact,
     .contact__github {
         font-size: 4vw;
         font-weight: 200;
     }
 
     .contact__mail {
-        margin: 0;
         margin-top: 1%;
-        color: var(--grey-text);
         font-size: 4vw;
         font-weight: 200;
     }
@@ -451,11 +461,7 @@ body {
         font-weight: 200;
     }
 
-    .footer__credits__text {
-        font-size: 4vw;
-        font-weight: 200;
-    }
-
+    .footer__credits__text,
     .footer__credits__font {
         font-size: 4vw;
         font-weight: 200;
@@ -468,9 +474,6 @@ body {
         font-weight: 200;
     }
 
-    .idk {
-        color: violet;
-    }
 }
 
 @media screen and (min-width: 769px) {
