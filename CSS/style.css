@@ -184,14 +184,10 @@ body {
     flex-wrap: wrap;
 }
 
-.footer__credits__text {
-    margin: 0;
-    color: var(--orange-text);
-}
-
+.footer__credits__text,
 .footer__credits__font {
     margin: 0;
-    color: var(--main-text);
+    color: var(--orange-text);
 }
 
 .footer__meme {
