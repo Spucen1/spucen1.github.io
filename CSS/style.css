@@ -167,6 +167,12 @@ body {
     color: var(--main-text);
 }
 
+.footer__meme {
+    margin: 0;
+    color: var(--grey-text);
+    text-align: end;
+}
+
 @media screen and (max-width: 768px) {
     .header {
         height: 75vw;
@@ -444,6 +450,16 @@ body {
         margin-top: 6%;
     }
 
+    .footer__meme {
+        margin-right: 10%;
+        margin-top: 7%;
+        font-size: 4vw;
+        font-weight: 200;
+    }
+
+    .idk {
+        color: violet;
+    }
 }
 
 @media screen and (min-width: 769px) {
