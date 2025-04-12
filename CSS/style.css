@@ -7,7 +7,23 @@
 
 @font-face {
     font-family: 'JetBrains Mono';
+    src: url('font/JetBrainsMono-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
     src: url('font/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('font/JetBrainsMono-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
 }
 
 body {
@@ -95,6 +111,7 @@ body {
 
     .menu__list a {
         font-size: 3.2vw;
+        font-weight: 400;
     }
 
     .menu__list a:hover {
@@ -127,15 +144,17 @@ body {
     }
 
     .header__text__introduction {
-        margin-top: 12%;
+        margin-top: 10%;
         margin-right: 3%;
         font-size: 6.7vw;
+        font-weight: 500;
     }
 
     .header__text__description {
-        margin-top: 28%;
+        margin-top: 26%;
         margin-right: 3%;
         font-size: 2.8vw;
+        font-weight: 400;
     }
 }
 
