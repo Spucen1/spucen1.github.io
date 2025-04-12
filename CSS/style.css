@@ -15,6 +15,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .header {
@@ -32,15 +33,11 @@ body {
 .menu__list li {
     list-style: none;
 }
+
 .menu__list a {
     list-style: none;
     color: var(--main-text);
     text-decoration: none;
-    font-family: 'JetBrains Mono',monospace;
-}
-
-.menu__list__home {
-    text-decoration: underline;
 }
 
 .header__img {
@@ -69,7 +66,6 @@ body {
     right: 0;
     z-index: 2;
     color: var(--orange-text);
-    font-family: 'JetBrains Mono',monospace;
 }
 
 .header__text__description {
@@ -77,12 +73,22 @@ body {
     right: 0;
     z-index: 2;
     color: var(--grey-text);
-    font-family: 'JetBrains Mono',monospace;
+}
+
+.tools__title {
+    color: var(--orange-text);
 }
 
 @media screen and (max-width: 768px) {
+    .header {
+        height: 80vw;
+    }
+
+    .menu {
+        padding-top: 3%;
+    }
+
     .menu__list {
-        margin-top: 3%;
         margin-right: 6%;
         gap: 6%;
     }
@@ -131,7 +137,6 @@ body {
         margin-right: 3%;
         font-size: 2.8vw;
     }
-
 }
 
 @media screen and (min-width: 769px) {
@@ -164,5 +169,4 @@ body {
         transform: translateX(-12%);
         transform-origin: center;
     }
-    
 }
