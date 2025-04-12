@@ -3,6 +3,11 @@
     --orange-text: #DF6012;
     --grey-text: #A6A6A6;
     --dark-grey: #2F2F2F;
+}  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('font/JetBrainsMono-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
 }
 
 @font-face {
@@ -95,6 +100,15 @@ body {
     color: var(--orange-text);
 }
 
+.tools__show {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: top;
+    gap: 2%;
+}
+
 @media screen and (max-width: 768px) {
     .header {
         height: 80vw;
@@ -162,9 +176,96 @@ body {
     }
 
     .tools__title {
+        margin: 0;
         font-size: 7vw;
         font-weight: 400;
-        margin-left: 10%;
+        margin-left: 13%;
+    }
+
+    .tools__show { 
+        width: 80%;
+        margin: auto;
+        margin-top: 5%;
+        padding-left: 15%;
+        gap: 7%;
+    }
+
+    .tools__show__ps__img {
+        width: 8vw;
+        height: auto;
+    }
+
+    .tools__show__ps__text {
+        margin: 0;
+        color: var(--main-text);
+        font-size: 5vw;
+        font-weight: 200;
+        line-height: 140%;
+    }
+
+    .tools__show__ai__img {
+        width: 8vw;
+        height: auto;
+    }
+
+    .tools__show__ai__text {
+        margin: 0;
+        color: var(--main-text);
+        font-size: 5vw;
+        font-weight: 200;
+        line-height: 140%;
+    }
+
+    .tools__show__html {
+        width: 28vw;
+        margin-top: 5%;
+    }
+
+    .tools__show__html__img {
+        width: 13vw;
+        height: auto;
+    }
+
+    .tools__show__html__text {
+        margin: 0;
+        color: var(--main-text);
+        font-size: 5vw;
+        font-weight: 200;
+        line-height: 140%;
+    }
+
+    .tools__show__aud {
+        margin-top: 5%;
+    }
+
+    .tools__show__aud__img {
+        width: 9vw;
+        height: auto;
+    }
+
+    .tools__show__aud__text {
+        margin: 0;
+        color: var(--main-text);
+        font-size: 5vw;
+        font-weight: 200;
+        line-height: 140%;
+    }
+
+    .tools__show__ble {
+        margin-top: 5%;
+    }
+
+    .tools__show__ble__img {
+        width: 9vw;
+        height: auto;
+    }
+
+    .tools__show__ble__text {
+        margin: 0;
+        color: var(--main-text);
+        font-size: 5vw;
+        font-weight: 200;
+        line-height: 140%;
     }
 }
 
