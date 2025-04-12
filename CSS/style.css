@@ -127,6 +127,46 @@ body {
     align-items: top;
 }
 
+.footer {
+    background-color: var(--darkest-grey);
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contact__contact {
+    color: var(--grey-text);
+    text-decoration: none;
+}
+
+.contact__github {
+    color: var(--grey-text);
+    text-decoration: none;
+}
+
+.footer__line {
+    background-color: var(--grey-text);
+}
+
+.footer__credits {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer__credits__text {
+    margin: 0;
+    color: var(--orange-text);
+}
+
+.footer__credits__font {
+    margin: 0;
+    color: var(--main-text);
+}
+
 @media screen and (max-width: 768px) {
     .header {
         height: 80vw;
@@ -195,7 +235,7 @@ body {
     }
 
     .tools {
-        margin-top: 17%;
+        margin-top: 30%;
     }
 
     .tools__title {
@@ -293,7 +333,7 @@ body {
     }
 
     .learning {
-        margin-top: 17%;
+        margin-top: 30%;
     }
 
     .learning__title {
@@ -362,7 +402,48 @@ body {
         font-weight: 200;
         line-height: 140%;
     }
-    
+
+    .footer {
+        margin-top: 30%;
+        padding-top: 2%;
+        padding-bottom: 8%;
+    }
+
+    .contact {
+        margin-left: 3%;
+        gap: 7%;
+    }
+
+    .contact__contact {
+        font-size: 4vw;
+        font-weight: 200;
+    }
+
+    .contact__github {
+        font-size: 4vw;
+        font-weight: 200;
+    }
+
+    .contact__mail {
+        margin: 0;
+        margin-top: 1%;
+        color: var(--grey-text);
+        font-size: 4vw;
+        font-weight: 200;
+    }
+
+    .footer__line {
+        width: 60vw;
+        height: 1px;
+        margin-left: 3%;
+        margin-top: 2%;
+    }
+
+    .footer__credits {
+        margin-left: 3%;
+        margin-top: 6%;
+    }
+
 }
 
 @media screen and (min-width: 769px) {
