@@ -113,7 +113,18 @@ body {
     flex-wrap: wrap;
     justify-content: left;
     align-items: top;
-    gap: 2%;
+}
+
+.learning__title {
+    color: var(--orange-text);
+}
+
+.learning__show {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: top;
 }
 
 @media screen and (max-width: 768px) {
@@ -194,6 +205,7 @@ body {
         margin-left: 13%;
     }
 
+    
     .tools__show { 
         width: 80%;
         margin: auto;
@@ -201,12 +213,12 @@ body {
         padding-left: 15%;
         gap: 7%;
     }
-
+    
     .tools__show__ps__img {
         width: 8vw;
         height: auto;
     }
-
+    
     .tools__show__ps__text {
         margin: 0;
         color: var(--main-text);
@@ -214,12 +226,12 @@ body {
         font-weight: 200;
         line-height: 140%;
     }
-
+    
     .tools__show__ai__img {
         width: 8vw;
         height: auto;
     }
-
+    
     .tools__show__ai__text {
         margin: 0;
         color: var(--main-text);
@@ -227,17 +239,17 @@ body {
         font-weight: 200;
         line-height: 140%;
     }
-
+    
     .tools__show__html {
         width: 28vw;
         margin-top: 5%;
     }
-
+    
     .tools__show__html__img {
         width: 13vw;
         height: auto;
     }
-
+    
     .tools__show__html__text {
         margin: 0;
         color: var(--main-text);
@@ -245,16 +257,16 @@ body {
         font-weight: 200;
         line-height: 140%;
     }
-
+    
     .tools__show__aud {
         margin-top: 5%;
     }
-
+    
     .tools__show__aud__img {
         width: 9vw;
         height: auto;
     }
-
+    
     .tools__show__aud__text {
         margin: 0;
         color: var(--main-text);
@@ -262,16 +274,16 @@ body {
         font-weight: 200;
         line-height: 140%;
     }
-
+    
     .tools__show__ble {
         margin-top: 5%;
     }
-
+    
     .tools__show__ble__img {
         width: 9vw;
         height: auto;
     }
-
+    
     .tools__show__ble__text {
         margin: 0;
         color: var(--main-text);
@@ -279,6 +291,78 @@ body {
         font-weight: 200;
         line-height: 140%;
     }
+
+    .learning {
+        margin-top: 17%;
+    }
+
+    .learning__title {
+        margin: 0;
+        font-size: 7vw;
+        font-weight: 400;
+        margin-left: 13%;
+    }
+
+    .learning__show {
+        width: 80%;
+        margin: auto;
+        margin-top: 5%;
+        padding-left: 15%;
+        gap: 7%;
+    }
+
+    .learning__show__py {
+        width: 28vw;
+    }
+
+    .learning__show__py__img {
+        width: 8vw;
+        height: auto;
+    }
+
+    .learning__show__py__text {
+        margin: 0;
+        color: var(--main-text);
+        font-size: 5vw;
+        font-weight: 200;
+        line-height: 140%;
+    }
+
+    .learning__show__js {
+        width: 28vw;
+    }
+
+    .learning__show__js__img {
+        width: 8vw;
+        height: auto;
+    }
+
+    .learning__show__js__text {
+        margin: 0;
+        color: var(--main-text);
+        font-size: 5vw;
+        font-weight: 200;
+        line-height: 140%;
+    }
+
+    .learning__show__id {
+        width: 28vw;
+        margin-top: 5%;
+    }
+
+    .learning__show__id__img {
+        width: 8vw;
+        height: auto;
+    }
+
+    .learning__show__id__text {
+        margin: 0;
+        color: var(--main-text);
+        font-size: 5vw;
+        font-weight: 200;
+        line-height: 140%;
+    }
+    
 }
 
 @media screen and (min-width: 769px) {
@@ -287,11 +371,11 @@ body {
         margin-right: 2%;
         gap: 2%;
     }
-
+    
     .menu__list a {
         font-size: 100%;
     }
-
+    
     .menu__list a:hover {
         color: var(--orange-text);
     }
