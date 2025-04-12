@@ -156,6 +156,16 @@ body {
         font-size: 2.8vw;
         font-weight: 400;
     }
+
+    .tools {
+        margin-top: 17%;
+    }
+
+    .tools__title {
+        font-size: 7vw;
+        font-weight: 400;
+        margin-left: 10%;
+    }
 }
 
 @media screen and (min-width: 769px) {
