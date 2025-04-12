@@ -88,7 +88,7 @@ body {
     }
 
     .menu__list a {
-        font-size: 80%;
+        font-size: 80vw;
     }
 
     .menu__list a:hover {
@@ -123,13 +123,13 @@ body {
     .header__text__introduction {
         margin-top: 12%;
         margin-right: 3%;
-        font-size: 165%;
+        font-size: 165vw;
     }
 
     .header__text__description {
         margin-top: 28%;
         margin-right: 3%;
-        font-size: 69%;
+        font-size: 69vw;
     }
 
 }
