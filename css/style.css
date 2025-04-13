@@ -200,6 +200,7 @@ body {
 .contact__mail {
     margin: 0;
     color: var(--grey-text);
+    text-decoration: none;
 }
 
 .footer__line {
