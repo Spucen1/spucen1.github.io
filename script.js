@@ -6,13 +6,16 @@ const introduction__text = [
     " Čaniga"
 ];
 
-const speed = 60;
+const speed = Math.random() * 40 + 60;
 let section = 0;
 let letter = 0;
 let element = null;
 
 function introduction() {
-    if (section >= introduction__text.length) return;
+    if (section >= introduction__text.length) {
+        description();
+        return;
+    }
 
     if (typeof introduction__text[section] === "string") {
         if (introduction__text[section] === "<br>") {
@@ -65,7 +68,7 @@ const description__text = [
     "with a strong interest."
 ];
   
-const iSpeed = 60;
+const iSpeed = Math.random() * 40 + 60;
 let iSection = 0;
 let iLetter = 0;
 let iElement = null;
@@ -113,7 +116,4 @@ function description() {
 
 
 
-window.onload = function() {
-    introduction();
-    setTimeout(description, 1800);
-};
+window.onload = introduction;
