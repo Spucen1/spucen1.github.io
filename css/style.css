@@ -300,19 +300,16 @@ body {
     .about {
         margin-top: 10%;
     }
-
+    
     .about__text {
-        opacity: 0;
         margin: 0;
-        margin-left: 6%;
-        margin-right: 6%;
+        margin-left: 7%;
+        margin-right: 5%;
         color: var(--main-text);
         font-size: 3.8vw;
         font-weight: 200;
-        animation: fadeIn 1s forwards;
-        animation-delay: 5s;
     }
-
+    
     @keyframes fadeIn {
         0% { opacity: 0; 
             transform: translateX(30px); 
@@ -321,13 +318,56 @@ body {
             transform: translateX(0); 
         }
     }
-
+    
     .about__text__line {
+        opacity: 0;
         height: 1px;
         margin-top: 2%;
         margin-bottom: 4%;
+        animation: fadeIn 1s forwards;
+        animation-delay: 5s;
     }
 
+    .num {
+        position: absolute;
+        padding-right: 1%;
+        color: var(--semidark-grey);
+        transform: translateX(-130%);
+        border-right: var(--semidark-grey) solid 1px;
+    }
+
+    .numx {
+        transform: translate(-140%, 140%);
+    }
+
+    .numy {
+        transform: translateX(-115%);
+    }
+
+    .about__text__line__delay {
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 5.5s;
+    }
+
+    .about__text__like {
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 5s;
+    }
+
+    .about__text__tools {
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 5.5s;
+    }
+
+    .about__text__future {
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 6s;
+    }
+    
     .tools {
         margin-top: 30%;
     }
