@@ -10,28 +10,28 @@
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('Font/JetBrainsMono-ExtraLight.woff2') format('woff2');
+    src: url('font/JetBrainsMono-ExtraLight.woff2') format('woff2');
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('Font/JetBrainsMono-Light.woff2') format('woff2');
+    src: url('font/JetBrainsMono-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('Font/JetBrainsMono-Regular.woff2') format('woff2');
+    src: url('font/JetBrainsMono-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('Font/JetBrainsMono-Medium.woff2') format('woff2');
+    src: url('font/JetBrainsMono-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
 }
