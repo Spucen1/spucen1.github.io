@@ -337,11 +337,11 @@ body {
     }
 
     .numx {
-        transform: translate(-140%, 140%);
+        transform: translate(-130%, 140%);
     }
 
     .numy {
-        transform: translateX(-115%);
+        transform: translateX(-118%);
     }
 
     .about__text__line__delay {
