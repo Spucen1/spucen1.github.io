@@ -73,7 +73,7 @@ const description__text = [
     "with a strong interest."
 ];
   
-const iSpeed = Math.random() * 30 + 30;
+const iSpeed = Math.random() * 20 + 20;
 let iSection = 0;
 let iLetter = 0;
 let iElement = null;
