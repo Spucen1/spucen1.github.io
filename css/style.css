@@ -320,7 +320,7 @@ body {
     
     @keyframes fadeIn {
         0% { opacity: 0; 
-            transform: translateX(30px); 
+            transform: translateX(20%); 
         }
         100% { opacity: 1; 
             transform: translateX(0); 
@@ -397,7 +397,15 @@ body {
     }
     
     .tools {
+        opacity: 0;
+        transform: translateY(30%);
+        transition: opacity 1s ease-out, transform 1s ease-out;
         margin-top: 20%;
+    }
+
+    .tools.active {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .tools__title {
@@ -476,7 +484,15 @@ body {
     }
 
     .learning {
+        opacity: 0;
+        transform: translateY(30%);
+        transition: opacity 1s ease-out, transform 1s ease-out;
         margin-top: 30%;
+    }
+
+    .learning.active {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .learning__title {

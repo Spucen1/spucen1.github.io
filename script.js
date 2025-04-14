@@ -120,9 +120,32 @@ function description() {
         }
     }
 }
-  
-
-
-
 
 window.onload = introduction;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toolsElement = document.querySelector(".tools");
+
+    const onScroll = () => {
+        const rect = toolsElement.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            toolsElement.classList.add("active");
+        }
+    };
+
+    window.addEventListener("scroll", onScroll);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const learningElement = document.querySelector(".learning");
+
+    const Scroll = () => {
+        const recta = learningElement.getBoundingClientRect();
+        if (recta.top < window.innerHeight && recta.bottom > 0) {
+            learningElement.classList.add("active");
+        }
+    };
+
+    window.addEventListener("scroll", Scroll);
+});
+
