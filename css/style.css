@@ -103,11 +103,14 @@ body {
     50% { opacity: 1; }
 }
 
+.cursor::after {
+    animation: blink 1s infinite;
+}
+
 .header__text__introduction::after {
     opacity: 0;
     position: absolute;
     content: '|';
-    animation: blink 1s 3;
     color: var(--main-text);
     transform: translateX(-40%);
     font-weight: 200;
@@ -124,8 +127,6 @@ body {
     opacity: 0;
     position: absolute;
     content: '|';
-    animation: blink 1s infinite;
-    animation-delay: 2s;
     color: var(--main-text);
     transform: translateX(-40%);
     font-weight: 200;
