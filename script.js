@@ -6,7 +6,7 @@ const introduction__text = [
     " Čaniga"
 ];
 
-const speed = Math.random() * 40 + 60;
+const speed = Math.random() * 40 + 40;
 let section = 0;
 let letter = 0;
 let element = null;
@@ -73,7 +73,7 @@ const description__text = [
     "with a strong interest."
 ];
   
-const iSpeed = Math.random() * 40 + 40;
+const iSpeed = Math.random() * 30 + 30;
 let iSection = 0;
 let iLetter = 0;
 let iElement = null;
