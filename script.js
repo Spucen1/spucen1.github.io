@@ -12,7 +12,12 @@ let letter = 0;
 let element = null;
 
 function introduction() {
+    if (section === 0) {
+        document.getElementById("introduction").classList.add("cursor")
+    }
+    
     if (section >= introduction__text.length) {
+        document.getElementById("introduction").classList.remove("cursor")
         description();
         return;
     }
@@ -74,6 +79,10 @@ let iLetter = 0;
 let iElement = null;
 
 function description() {
+    if (iSection === 0) {
+        document.getElementById("description").classList.add("cursor")
+    }
+    
     if (iSection >= description__text.length) return;
 
     if (typeof description__text[iSection] === "string") {
