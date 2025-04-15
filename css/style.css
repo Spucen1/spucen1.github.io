@@ -486,7 +486,7 @@ body {
         opacity: 0;
         transform: translateY(30%);
         transition: opacity 1s ease-out, transform 1s ease-out;
-        margin-top: 40%;
+        margin-top: 50%;
     }
 
     .learning.active {
@@ -546,7 +546,7 @@ body {
     }
 
     .footer {
-        margin-top: 30%;
+        margin-top: 50%;
         padding-top: 2%;
         padding-bottom: 8%;
     }
