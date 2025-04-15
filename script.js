@@ -121,31 +121,22 @@ function description() {
     }
 }
 
-window.onload = introduction;
+const section1 = document.querySelectorAll(".tools");
+const section2 = document.querySelectorAll(".learn");
 
-document.addEventListener("DOMContentLoaded", () => {
-    const toolsElement = document.querySelector(".tools");
+const sections = [...section1, ...section2];
 
-    const onScroll = () => {
-        const rect = toolsElement.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-            toolsElement.classList.add("active");
-        }
-    };
-
-    window.addEventListener("scroll", onScroll);
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.5
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const learningElement = document.querySelector(".learning");
-
-    const Scroll = () => {
-        const recta = learningElement.getBoundingClientRect();
-        if (recta.top < window.innerHeight && recta.bottom > 0) {
-            learningElement.classList.add("active");
-        }
-    };
-
-    window.addEventListener("scroll", Scroll);
+sections.forEach(section => {
+  observer.observe(section);
 });
-
