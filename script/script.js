@@ -132,6 +132,10 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add("active");
+      entry.target.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
       observer.unobserve(entry.target);
     }
   });
@@ -141,4 +145,5 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(section => {
   observer.observe(section);
+  
 });
