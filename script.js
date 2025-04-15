@@ -121,8 +121,10 @@ function description() {
     }
 }
 
+window.onload = introduction
+
 const section1 = document.querySelectorAll(".tools");
-const section2 = document.querySelectorAll(".learn");
+const section2 = document.querySelectorAll(".learning");
 
 const sections = [...section1, ...section2];
 
