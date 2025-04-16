@@ -127,6 +127,25 @@ const section1 = document.querySelectorAll(".tools");
 const section2 = document.querySelectorAll(".learning");
 const sections = [...section1, ...section2];
 
+let lastScrollY = window.scrollY;
+let lastTimestamp = performance.now();
+let scrollSpeed = 0;
+
+function updateScrollSpeed() {
+  const currentY = window.scrollY;
+  const currentTime = performance.now();
+  const deltaY = currentY - lastScrollY;
+  const deltaTime = currentTime - lastTimestamp;
+
+  scrollSpeed = deltaY / deltaTime;
+
+  lastScrollY = currentY;
+  lastTimestamp = currentTime;
+
+  requestAnimationFrame(updateScrollSpeed);
+}
+updateScrollSpeed();
+
 function scrollToElement(target, duration = 800, easing = easeInOutQuad) {
   const start = window.pageYOffset;
   const end = target.getBoundingClientRect().top + start - (window.innerHeight / 2) + (target.offsetHeight / 2);
@@ -151,18 +170,33 @@ function easeInOutQuad(t, b, c, d) {
   return -c/2 * (t*(t-2) - 1) + b;
 }
 
+function easeOutCubic(t, b, c, d) {
+  t /= d;
+  t--;
+  return c * (t * t * t + 1) + b;
+}
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting && !entry.target.classList.contains("active")) {
       entry.target.classList.add("active");
 
-      scrollToElement(entry.target, 1000);
+      const start = window.scrollY;
+      const end = entry.target.getBoundingClientRect().top + start - (window.innerHeight / 2) + (entry.target.offsetHeight / 2);
+      const distance = Math.abs(end - start);
+
+      const speed = Math.min(Math.abs(scrollSpeed), 2);
+      const baseDuration = 1000;
+      const duration = baseDuration / (speed + 0.5);
+      const easing = speed > 1 ? easeOutCubic : easeInOutQuad;
+
+      scrollToElement(entry.target, duration, easing);
 
       observer.unobserve(entry.target);
     }
   });
 }, {
-  threshold: 0.7
+  threshold: 0.5
 });
 
 sections.forEach(section => {
