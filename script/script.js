@@ -125,17 +125,39 @@ window.onload = introduction
 
 const section1 = document.querySelectorAll(".tools");
 const section2 = document.querySelectorAll(".learning");
-
 const sections = [...section1, ...section2];
+
+function scrollToElement(target, duration = 800, easing = easeInOutQuad) {
+  const start = window.pageYOffset;
+  const end = target.getBoundingClientRect().top + start - (window.innerHeight / 2) + (target.offsetHeight / 2);
+  const distance = end - start;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = easing(timeElapsed, start, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  requestAnimationFrame(animation);
+}
+
+function easeInOutQuad(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c/2*t*t + b;
+  t--;
+  return -c/2 * (t*(t-2) - 1) + b;
+}
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
+    if (entry.isIntersecting && !entry.target.classList.contains("active")) {
       entry.target.classList.add("active");
-      entry.target.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
+
+      scrollToElement(entry.target, 1000);
+
       observer.unobserve(entry.target);
     }
   });
@@ -145,5 +167,4 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(section => {
   observer.observe(section);
-  
 });
