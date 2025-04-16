@@ -121,13 +121,18 @@ function description() {
     }
 }
 
-window.onload = introduction
+window.onload = () => {
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+    introduction();
+};
 
 const section1 = document.querySelectorAll(".tools");
 const section2 = document.querySelectorAll(".learning");
 const sections = [...section1, ...section2];
 
-// === Scroll Speed & Direction Tracking ===
 let lastScrollY = window.scrollY;
 let lastTimestamp = performance.now();
 let scrollSpeed = 0;
@@ -149,7 +154,6 @@ function updateScrollSpeed() {
 }
 updateScrollSpeed();
 
-// === Custom Smooth Scroll Animation ===
 function scrollToElement(target, duration = 800, easing = easeInOutQuad) {
   const start = window.pageYOffset;
   const end = target.getBoundingClientRect().top + start - (window.innerHeight / 2) + (target.offsetHeight / 2);
@@ -167,7 +171,6 @@ function scrollToElement(target, duration = 800, easing = easeInOutQuad) {
   requestAnimationFrame(animation);
 }
 
-// === Easing Functions ===
 function easeInOutQuad(t, b, c, d) {
   t /= d / 2;
   if (t < 1) return c / 2 * t * t + b;
@@ -181,7 +184,6 @@ function easeOutCubic(t, b, c, d) {
   return c * (t * t * t + 1) + b;
 }
 
-// === Intersection Observer ===
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (
@@ -195,9 +197,9 @@ const observer = new IntersectionObserver(entries => {
       const end = entry.target.getBoundingClientRect().top + start - (window.innerHeight / 2) + (entry.target.offsetHeight / 2);
       const distance = Math.abs(end - start);
 
-      const speed = Math.min(Math.abs(scrollSpeed), 2); // cap the speed
+      const speed = Math.min(Math.abs(scrollSpeed), 2);
       const baseDuration = 1000;
-      const duration = baseDuration / (speed + 0.5); // faster scroll = shorter duration
+      const duration = baseDuration / (speed + 0.5);
       const easing = speed > 1 ? easeOutCubic : easeInOutQuad;
 
       scrollToElement(entry.target, duration, easing);
