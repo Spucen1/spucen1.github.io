@@ -872,7 +872,7 @@ body {
         /*opacity: 0;
         transform: translateY(30%);*/
         transition: opacity 1s ease-out, transform 1s ease-out;
-        margin-top: 70%;
+        margin-top: 40%;
     }
 
     .learning.active {
@@ -918,52 +918,52 @@ body {
     }
 
     .footer {
-        margin-top: 70%;
+        margin-top: 40%;
         padding-top: 2%;
-        padding-bottom: 8%;
+        padding-bottom: 1%;
     }
 
     .contact {
-        margin-left: 3%;
+        margin-left: 5%;
+        margin-right: 60%;
         gap: 7%;
     }
 
     .contact__contact,
     .contact__github {
-        font-size: 4vw;
+        font-size: 1.5vw;
         font-weight: 200;
     }
 
     .contact__mail {
         margin-top: 1%;
-        font-size: 4vw;
+        font-size: 1.5vw;
         font-weight: 200;
     }
 
     .footer__line {
-        width: 60vw;
+        width: 22.5vw;
         height: 1px;
-        margin-left: 3%;
-        margin-top: 2%;
+        margin-left: 5%;
+        margin-top: 1%;
     }
 
     .footer__credits {
-        margin-left: 3%;
-        margin-top: 6%;
-        font-size: 4vw;
+        margin-left: 5%;
+        margin-top: 3%;
         font-weight: 200;
     }
 
     .footer__credits__text,
     .footer__credits__font {
-        font-size: 4vw;
+        font-size: 1.5vw;
         font-weight: 200;
     }
 
     .footer__meme {
         margin-right: 10%;
-        margin-top: 7%;
-        font-size: 4vw;
+        margin-top: 3%;
+        font-size: 1.5vw;
         font-weight: 200;
     }
 
