@@ -36,11 +36,6 @@
     font-weight: 500;
     font-style: normal;
 }
-
-html {
-    background-color: var(--darkest-grey);
-}
-
 body {
     background-color: black;
     -webkit-font-smoothing: antialiased;
