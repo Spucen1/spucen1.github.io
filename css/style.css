@@ -451,13 +451,13 @@ body {
     }
     
     .tools__show__ps__img {
-        width: 8vw;
-        height: auto;
+        width: auto;
+        height: 8vw;
     }
     
     .tools__show__ai__img {
-        width: 8vw;
-        height: auto;
+        width: auto;
+        height: 8vw;
     }
     
     .tools__show__html {
@@ -466,8 +466,8 @@ body {
     }
     
     .tools__show__html__img {
-        width: 13vw;
-        height: auto;
+        width: auto;
+        height: 8vw;
     }
     
     .tools__show__aud {
@@ -475,8 +475,8 @@ body {
     }
     
     .tools__show__aud__img {
-        width: 9vw;
-        height: auto;
+        width: auto;
+        height: 8vw;
     }
     
     .tools__show__ble {
@@ -788,8 +788,8 @@ body {
     }
     
     .tools {
-        /*opacity: 0;
-        transform: translateY(30%);*/
+        opacity: 0;
+        transform: translateY(30%);
         transition: opacity 1s ease-out, transform 1s ease-out;
         margin-top: 30%;
     }
@@ -801,18 +801,28 @@ body {
 
     .tools__title {
         margin: 0;
-        font-size: 4vw;
+        font-size: 3.5vw;
         font-weight: 400;
         margin-left: 13%;
     }
     
     
     .tools__show { 
-        width: 85%;
         margin: auto;
-        margin-top: 5%;
-        padding-left: 15%;
-        gap: 7%;
+        margin-top: 3%;
+        padding-left: 14%;
+        gap: 4%;
+    }
+
+    .tools__show__ps,
+    .tools__show__ai,
+    .tools__show__html,
+    .tools__show__aud,
+    .tools__show__ble,
+    .tools__show__fig {
+        width: 16vw;
+        padding-left: 1%;
+        border-left: var(--dark-grey) solid 1px;
     }
     
     .tools__show__ps__text,
@@ -821,70 +831,46 @@ body {
     .tools__show__aud__text,
     .tools__show__ble__text,
     .tools__show__fig__text {
-        font-size: 3vw;
+        font-size: 2.3vw;
         font-weight: 200;
         line-height: 140%;
     }
     
-    .tools__show__ps__img {
+    .tools__show__ps__img,
+    .tools__show__ai__img,
+    .tools__show__html__img,
+    .tools__show__aud__img,
+    .tools__show__ble__img,
+    .tools__show__fig__img {
         width: auto;
-        height: 5vw;
+        height: 3vw;
     }
     
-    .tools__show__ai__img {
-        width: auto;
-        height: 5vw;
-    }
-    
-    .tools__show__html {
-        width: 10vw;
-    }
-    
-    .tools__show__html__img {
-        width: auto;
-        height: 5vw;
-        top: 100%;
-    }
-    
-    .tools__show__aud__img {
-        width: auto;
-        height: 5vw;
-    }
-    
-    .tools__show__ble {
-        width: 27vw;
-        margin-top: 5%;
-    }
-    
-    .tools__show__ble__img {
-        width: auto;
-        height: 8vw;
-    }
-
+    .tools__show__ble,
     .tools__show__fig {
         margin-top: 5%;
     }
 
-    .tools__show__fig__img {
-        width: auto;
-        height: 8vw;
-    }
-
     .tools__seemore,
     .learning__seemore {
-        margin-top: 10%;
-        margin-left: 22%;
+        margin-top: 5%;
+        margin-left: 18%;
     }
-
+    
     .tools__seemore__text,
     .learning__seemore__text {
-        font-size: 5vw;
+        font-size: 2.3vw;
         font-weight: 200;
     }
+    
+        .tools__seemore__text:hover,
+        .learning__seemore__text:hover {
+            color: var(--orange-text);
+        }
 
     .learning {
-        opacity: 0;
-        transform: translateY(30%);
+        /*opacity: 0;
+        transform: translateY(30%);*/
         transition: opacity 1s ease-out, transform 1s ease-out;
         margin-top: 70%;
     }
@@ -896,53 +882,39 @@ body {
 
     .learning__title {
         margin: 0;
-        font-size: 7vw;
+        font-size: 3.5vw;
         font-weight: 400;
         margin-left: 13%;
     }
 
     .learning__show {
-        width: 80%;
         margin: auto;
-        margin-top: 5%;
-        padding-left: 15%;
-        gap: 7%;
+        margin-top: 3%;
+        padding-left: 14%;
+        gap: 4%;
     }
 
     .learning__show__py__text,
     .learning__show__js__text,
     .learning__show__id__text {
-        font-size: 5vw;
+        font-size: 2.3vw;
         font-weight: 200;
         line-height: 140%;
     }
 
-    .learning__show__py {
-        width: 28vw;
-    }
-
-    .learning__show__py__img {
-        width: 8vw;
-        height: auto;
-    }
-
-    .learning__show__js {
-        width: 28vw;
-    }
-
-    .learning__show__js__img {
-        width: 8vw;
-        height: auto;
-    }
-
+    .learning__show__py,
+    .learning__show__js,
     .learning__show__id {
-        width: 28vw;
-        margin-top: 5%;
+        width: 16vw;
+        padding-left: 1%;
+        border-left: var(--dark-grey) solid 1px;
     }
 
+    .learning__show__py__img,
+    .learning__show__js__img,
     .learning__show__id__img {
-        width: 8vw;
-        height: auto;
+        width: auto;
+        height: 3vw;
     }
 
     .footer {
