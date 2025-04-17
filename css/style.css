@@ -37,6 +37,10 @@
     font-style: normal;
 }
 
+html {
+    background-color: var(--darkest-grey);
+}
+
 body {
     background-color: black;
     -webkit-font-smoothing: antialiased;
@@ -162,6 +166,18 @@ body {
 .tools__show__fig__text {
     margin: 0;
     color: var(--main-text);
+}
+
+.tools__seemore,
+.learning__seemore {
+    margin: 0;
+}
+
+.tools__seemore__text,
+.learning__seemore__text {
+    margin: 0;
+    color: var(--grey-text);
+    text-decoration: none;
 }
 
 .learning__title {
@@ -480,6 +496,18 @@ body {
     .tools__show__fig__img {
         width: auto;
         height: 8vw;
+    }
+
+    .tools__seemore,
+    .learning__seemore {
+        margin-top: 10%;
+        margin-left: 22%;
+    }
+
+    .tools__seemore__text,
+    .learning__seemore__text {
+        font-size: 5vw;
+        font-weight: 200;
     }
 
     .learning {
