@@ -37,11 +37,17 @@
     font-style: normal;
 }
 body {
-    background-color: black;
+    background-color: var(--orange-text);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-family: 'JetBrains Mono', monospace;
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+    background-color: black;
 }
 
 .header {
