@@ -1,0 +1,171 @@
+:root {
+    --main-text: #F4F4F4;
+    --orange-text: #DF6012;
+    --grey-text: #A6A6A6;
+    --semidark-grey: #5f5f5f;
+    --darked-grey: #4F4F4F;
+    --dark-grey: #2F2F2F;
+    --dark-grey-2: #1f1f1f;
+    --darkest-grey: #111111;
+}  
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../../assets/font/JetBrainsMono-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../../assets/font/JetBrainsMono-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../../assets/font/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../../assets/font/JetBrainsMono-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--orange-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.header {
+    position: relative;
+}
+
+.dezign {
+    position: absolute;
+    background-color: var(--darkest-grey);
+}
+
+.menu__list {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.menu__list li {
+    list-style: none;
+}
+
+.menu__list a {
+    list-style: none;
+    color: var(--main-text);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: 75vw;
+    }
+
+    .dezign {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .menu {
+        padding-top: 3%;
+    }
+
+    .menu__list {
+        margin-right: 6%;
+        gap: 6%;
+    }
+
+    .menu__list a {
+        font-size: 3.2vw;
+        font-weight: 400;
+    }
+
+    .menu__list a:hover {
+        color: var(--orange-text);
+    }
+
+    .menu__list__home {
+        position: relative;
+    }
+
+    .menu__list__home::after {
+        content: '';
+        position: absolute;
+        width: 130%;
+        height: 5%;
+        background-color: var(--main-text);
+        bottom: -2px;
+        left: 0;
+        transform: translateX(-12%);
+        transform-origin: center;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+    .header {
+        height: 45vw;
+    }
+
+    .dezign {
+        width: 20vw;
+        height: 45vw;
+        margin-left: 14%;
+    }
+
+    .menu {
+        padding-top: 1%;
+    }
+
+    .menu__list {
+        margin-right: 10%;
+        gap: 2%;
+    }
+
+    .menu__list a {
+        font-size: 1.3vw;
+        font-weight: 400;
+    }
+
+    .menu__list a:hover {
+        color: var(--orange-text);
+    }
+
+    .menu__list__portfolio {
+        position: relative;
+    }
+
+    .menu__list__portfolio::after {
+        content: '';
+        position: absolute;
+        width: 150%;
+        height: 5%;
+        background-color: var(--main-text);
+        bottom: -2px;
+        left: 0;
+        transform: translateX(-17%);
+        transform-origin: center;
+    }
+
+}

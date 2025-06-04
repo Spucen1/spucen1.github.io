@@ -36,6 +36,7 @@
     font-weight: 500;
     font-style: normal;
 }
+
 body {
     background-color: var(--orange-text);
     -webkit-font-smoothing: antialiased;
