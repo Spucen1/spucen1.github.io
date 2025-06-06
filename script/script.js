@@ -151,9 +151,34 @@ const boxLineDelay = document.querySelector('.about__text__line__delay');
         setTimeout(() => {
             boxFuture.classList.add('active');
         }, 1000);
-
-        window.removeEventListener('scroll', aboutTextAnimaton);
     }
   }
 
-window.addEventListener('scroll', aboutTextAnimaton);
+
+const windowHeight = window.innerHeight;
+const documentHeight = document.documentElement.scrollHeight;
+
+elementTools = document.querySelector('.tools');
+
+function scrollToolsAnimation() {
+    let scrollPositionTools = window.scrollY;
+    if (scrollPositionTools / (documentHeight - windowHeight) > 0.4) {
+        if (elementTools.classList.contains('active')) return;
+        elementTools.classList.add('active');
+    }
+}
+
+
+elementLearning = document.querySelector('.learning');
+
+function scrollLearningAnimation() {
+    let scrollPositionLearning = window.scrollY;
+    if (scrollPositionLearning / (documentHeight - windowHeight) > 0.7) {
+        elementLearning.classList.add('active');
+    }
+}
+window.addEventListener('scroll', () => {
+    scrollLearningAnimation();
+    scrollToolsAnimation();
+    aboutTextAnimaton();
+})

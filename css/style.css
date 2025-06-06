@@ -415,7 +415,7 @@ body {
     
     .tools {
         opacity: 0;
-        transform: translateY(30%);
+        transform: translateY(40%);
         transition: opacity 1s ease-out, transform 1s ease-out;
         margin-top: 60%;
     }
@@ -513,7 +513,7 @@ body {
 
     .learning {
         opacity: 0;
-        transform: translateY(30%);
+        transform: translateY(40%);
         transition: opacity 1s ease-out, transform 1s ease-out;
         margin-top: 70%;
     }
@@ -814,7 +814,7 @@ body {
     
     .tools {
         opacity: 0;
-        transform: translateY(30%);
+        transform: translateY(40%);
         transition: opacity 1s ease-out, transform 1s ease-out;
         margin-top: 30%;
     }
@@ -894,8 +894,8 @@ body {
         }
 
     .learning {
-        /*opacity: 0;
-        transform: translateY(30%);*/
+        opacity: 0;
+        transform: translateY(40%);
         transition: opacity 1s ease-out, transform 1s ease-out;
         margin-top: 40%;
     }

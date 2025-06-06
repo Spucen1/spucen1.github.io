@@ -109,7 +109,7 @@ body {
         position: relative;
     }
 
-    .menu__list__home::after {
+    .menu__list__portfolio::after {
         content: '';
         position: absolute;
         width: 130%;
@@ -159,12 +159,12 @@ body {
     .menu__list__portfolio::after {
         content: '';
         position: absolute;
-        width: 150%;
+        width: 110%;
         height: 5%;
         background-color: var(--main-text);
         bottom: -2px;
         left: 0;
-        transform: translateX(-17%);
+        transform: translateX(-4.5%);
         transform-origin: center;
     }
 
