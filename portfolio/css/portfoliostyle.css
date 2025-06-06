@@ -105,19 +105,19 @@ body {
         color: var(--orange-text);
     }
 
-    .menu__list__home {
+    .menu__list__portfolio {
         position: relative;
     }
 
     .menu__list__portfolio::after {
         content: '';
         position: absolute;
-        width: 130%;
+        width: 115%;
         height: 5%;
         background-color: var(--main-text);
         bottom: -2px;
         left: 0;
-        transform: translateX(-12%);
+        transform: translateX(-6%);
         transform-origin: center;
     }
 
@@ -164,7 +164,7 @@ body {
         background-color: var(--main-text);
         bottom: -2px;
         left: 0;
-        transform: translateX(-4.5%);
+        transform: translateX(-5%);
         transform-origin: center;
     }
 
