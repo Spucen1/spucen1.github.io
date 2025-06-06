@@ -186,11 +186,11 @@ body {
         color: var(--orange-text);
     }
 
-    .menu__list__portfolio {
+    .menu__list__contact {
         position: relative;
     }
 
-    .menu__list__portfolio::after {
+    .menu__list__contact::after {
         content: '';
         position: absolute;
         width: 115%;
@@ -283,11 +283,11 @@ body {
         color: var(--orange-text);
     }
 
-    .menu__list__portfolio {
+    .menu__list__contact {
         position: relative;
     }
 
-    .menu__list__portfolio::after {
+    .menu__list__contact::after {
         content: '';
         position: absolute;
         width: 110%;
