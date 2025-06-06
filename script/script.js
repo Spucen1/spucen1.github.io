@@ -129,88 +129,31 @@ window.onload = () => {
     introduction();
 };
 
-const section1 = document.querySelectorAll(".tools");
-const section2 = document.querySelectorAll(".learning");
-const sections = [...section1, ...section2];
+const boxLike = document.querySelector('.about__text__like');
+const boxTools = document.querySelector('.about__text__tools');
+const boxFuture = document.querySelector('.about__text__future');
+const boxLine = document.querySelector('.about__text__line');
+const boxLineDelay = document.querySelector('.about__text__line__delay');
 
-let lastScrollY = window.scrollY;
-let lastTimestamp = performance.now();
-let scrollSpeed = 0;
-let scrollDirection = "down";
+  function aboutTextAnimaton() {
+    const boxLikeTop = boxLike.getBoundingClientRect().top;
+    const boxTriggerPoint = window.innerHeight * 0.5;
 
-function updateScrollSpeed() {
-  const currentY = window.scrollY;
-  const currentTime = performance.now();
-  const deltaY = currentY - lastScrollY;
-  const deltaTime = currentTime - lastTimestamp;
+    if (boxLikeTop < boxTriggerPoint) {
+        boxLike.classList.add('active');
+        boxLine.classList.add('active');
 
-  scrollSpeed = deltaY / deltaTime;
-  scrollDirection = deltaY > 0 ? "down" : deltaY < 0 ? "up" : scrollDirection;
+        setTimeout(() => {
+            boxTools.classList.add('active');
+            boxLineDelay.classList.add('active');
+        }, 500);
+        
+        setTimeout(() => {
+            boxFuture.classList.add('active');
+        }, 1000);
 
-  lastScrollY = currentY;
-  lastTimestamp = currentTime;
-
-  requestAnimationFrame(updateScrollSpeed);
-}
-updateScrollSpeed();
-
-function scrollToElement(target, duration = 800, easing = easeInOutQuad) {
-  const start = window.pageYOffset;
-  const end = target.getBoundingClientRect().top + start - (window.innerHeight / 2) + (target.offsetHeight / 2);
-  const distance = end - start;
-  let startTime = null;
-
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    const timeElapsed = currentTime - startTime;
-    const run = easing(timeElapsed, start, distance, duration);
-    window.scrollTo(0, run);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
+        window.removeEventListener('scroll', aboutTextAnimaton);
+    }
   }
 
-  requestAnimationFrame(animation);
-}
-
-function easeInOutQuad(t, b, c, d) {
-  t /= d / 2;
-  if (t < 1) return c / 2 * t * t + b;
-  t--;
-  return -c / 2 * (t * (t - 2) - 1) + b;
-}
-
-function easeOutCubic(t, b, c, d) {
-  t /= d;
-  t--;
-  return c * (t * t * t + 1) + b;
-}
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (
-      entry.isIntersecting &&
-      !entry.target.classList.contains("active") &&
-      scrollDirection === "down"
-    ) {
-      entry.target.classList.add("active");
-
-      const start = window.scrollY;
-      const end = entry.target.getBoundingClientRect().top + start - (window.innerHeight / 2) + (entry.target.offsetHeight / 2);
-      const distance = Math.abs(end - start);
-
-      const speed = Math.min(Math.abs(scrollSpeed), 2);
-      const baseDuration = 1000;
-      const duration = baseDuration / (speed + 0.5);
-      const easing = speed > 1 ? easeOutCubic : easeInOutQuad;
-
-      scrollToElement(entry.target, duration, easing);
-
-      observer.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.5
-});
-
-sections.forEach(section => {
-  observer.observe(section);
-});
+window.addEventListener('scroll', aboutTextAnimaton);
