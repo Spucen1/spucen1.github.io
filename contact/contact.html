@@ -29,19 +29,30 @@
                 
             </nav>
 
+            <p class="header__title">Contact <span class="orange">Me</span></p>
+
         </section>
 
         <section class="contact">
 
             <form class="contact__form" action="https://formsubmit.co/samuel.caniga07@gmail.com" method="POST">
 
-                <input class="contact__form__name contact__form__input" type="text" name="name" placeholder="Name" required>
+                <div class="contact__form__wrapper">
 
-                <input class="contact__form__email contact__form__input" type="email" name="email" placeholder="Email" required>
+                    <input class="contact__form__name contact__form__input" type="text" name="name" placeholder="Name" required>
 
-                <input class="contact__form__subject contact__form__input" type="text" name="subject" placeholder="Subject" required>
+                    <input class="contact__form__email contact__form__input" type="email" name="email" placeholder="Email" required>
 
-                <textarea class="contact__form__message" name="message" id="message" placeholder="message"></textarea>
+                    <input class="contact__form__subject contact__form__input" type="text" name="subject" placeholder="Subject" required>
+
+                </div>
+                
+                <div class="contact__form__wrapper">
+
+                    <textarea class="contact__form__message contact__form__input" name="message" id="message" placeholder="message"></textarea>
+
+                </div>
+                
 
                 <button class="contact__form__submit" type="submit">Send</button>
 

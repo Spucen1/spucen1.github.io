@@ -37,6 +37,12 @@
     font-style: normal;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #000 inset;
+    -webkit-text-fill-color: var(--main-text);
+    transition: background-color 9999s ease-in-out 0s;
+}
+
 .grey {
     color: var(--grey-text);
 }
@@ -90,6 +96,14 @@ body {
     text-decoration: none;
 }
 
+.header__title {
+    margin: 0;
+    padding: 0;
+    color: var(--main-text);
+    text-align: center;
+    font-weight: 200;
+}
+
 .contact {
     width: 100%;
     margin: 0;
@@ -99,6 +113,14 @@ body {
 .contact__form {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__form__wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,6 +224,78 @@ body {
         transform-origin: center;
     }
 
+    .header__title {
+        font-size: 11vw;
+        margin-top: 50%;
+    }
+
+    .contact__form__input {
+        width: 80%;
+        height: 10vw;
+        font-size: 4vw;
+        padding-left: 3vw;
+        margin: 3% 0;
+        border: none;
+        border-radius: 3vw;
+        color: var(--main-text);
+        background-color: var(--dark-grey-2);
+        resize: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .contact__form__input:hover {
+        background-color: black;
+        outline: var(--orange-text) 2px solid;
+        color: var(--orange-text);
+        transition: all 0.8s ease-in-out;
+    }
+
+    .contact__form__input::placeholder {
+        color: var(--main-text);
+    }
+
+    .contact__form__input:hover::placeholder {
+        color: var(--orange-text);
+        transition: all 0.8s ease-in-out;
+    }
+
+    .contact__form__input:focus {
+        background-color: black;
+        outline: var(--orange-text) 2px solid;
+        color: var(--orange-text);
+        transition: all 0.8s ease-in-out;
+    }
+
+    .contact__form__input:focus::placeholder {
+        color: var(--orange-text);
+        transition: all 0.8s ease-in-out;
+    }
+
+    .contact__form__message {
+        height: 20vw;
+        padding-top: 2vw;
+    }
+
+    .contact__form__submit {
+        width: 70%;
+        height: 12vw;
+        font-size: 7vw;
+        font-weight: 200;
+        margin-top: 3%;
+        border: none;
+        border-radius: 15px;
+        background-color: var(--dark-grey-2);
+        color: var(--main-text);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .contact__form__submit:hover {
+        background-color: black;
+        outline: var(--orange-text) 2px solid;
+        color: var(--orange-text);
+        transition: all 0.8s ease-in-out;
+    }
+
     .footer {
         margin-top: 70%;
         padding-top: 2%;
@@ -256,12 +350,13 @@ body {
 
 @media screen and (min-width: 769px) {
     .header {
-        height: 45vw;
+        height: 20vw;
     }
 
     .dezign {
-        width: 20vw;
-        height: 45vw;
+        width: 15vw;
+        height: 16vw;
+        font-size: 4vw;
         margin-left: 14%;
     }
 
@@ -299,8 +394,100 @@ body {
         transform-origin: center;
     }
 
+    .header__title {
+        font-size: 5vw;
+        margin-top: 10%;
+    }
+
+    .contact__form {
+        width: 80%;
+        height: 100%;
+        padding: 0 10%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact__form__wrapper {
+        width: 40%;
+        display: flex;
+        gap: 1.8vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact__form__input {
+        width: 70%;
+        height: 3vw;
+        font-size: 1.2vw;
+        padding-left: 1.5vw;
+        margin: 0;
+        border: none;
+        border-radius: 1vw;
+        color: var(--main-text);
+        background-color: var(--dark-grey-2);
+        resize: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .contact__form__input:hover {
+        background-color: black;
+        outline: var(--orange-text) 2px solid;
+        color: var(--orange-text);
+        transition: all 0.8s ease-in-out;
+    }
+
+    .contact__form__input::placeholder {
+        color: var(--main-text);
+    }
+
+    .contact__form__input:hover::placeholder {
+        color: var(--orange-text);
+        transition: all 0.8s ease-in-out;
+    }
+
+    .contact__form__input:focus {
+        background-color: black;
+        outline: var(--orange-text) 2px solid;
+        color: var(--orange-text);
+        transition: all 0.8s ease-in-out;
+    }
+
+    .contact__form__input:focus::placeholder {
+        color: var(--orange-text);
+        transition: all 0.8s ease-in-out;
+    }
+
+    .contact__form__message {
+        height: 12.5vw;
+        padding-top: 1vw;
+    }
+
+    .contact__form__submit {
+        width: 30%;
+        height: 3.2vw;
+        font-size: 2vw;
+        font-weight: 200;
+        margin-top: 5%;
+        border: none;
+        border-radius: 1vw;
+        background-color: var(--dark-grey-2);
+        color: var(--main-text);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .contact__form__submit:hover {
+        background-color: black;
+        outline: var(--orange-text) 2px solid;
+        color: var(--orange-text);
+        transition: all 0.8s ease-in-out;
+    }
+
     .footer {
-        margin-top: 40%;
+        margin-top: 20%;
         padding-top: 2%;
         padding-bottom: 1%;
     }
