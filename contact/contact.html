@@ -8,9 +8,66 @@
     <meta property="og:image" content="../assets/img/icon.ico" />
     <title>Samuel Čaniga Contact</title>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="css/contactstyle.css">
+    <link rel="stylesheet" href="css/portfoliostyle.css">
+    <link rel="icon" href="../assets/img/icon.ico" type="image/x-icon">
 </head>
 <body>
     
+    <main class="main">
+
+        <section class="header">
+
+            <div class="dezign">Samuel<br>Čaniga</div>
+
+            <nav class="menu">
+                
+                <ul class="menu__list">
+                    <li><a class="menu__list__home" href="../index.html">Home</a></li>
+                    <li><a class="menu__list__portfolio" href="../portfolio/portfolio.html">Portfolio</a></li>
+                    <li><a class="menu__list__contact" href="contact.html">Contact</a></li>
+                </ul>
+                
+            </nav>
+
+        </section>
+
+        <section class="contact">
+
+            <form class="contact__form" action="https://formsubmit.co/your@email.com" method="post">
+
+                <input class="contact__form__name contact__form__input" type="text" name="name" placeholder="Name" required>
+
+                <input class="contact__form__email contact__form__input" type="email" name="email" placeholder="Email" required>
+
+                <input class="contact__form__subject contact__form__input" type="text" name="subject" placeholder="Subject" required>
+
+                <textarea class="contact__form__message" name="message" id="message">Message</textarea>
+
+                <button class="contact__form__submit" type="submit">Send</button>
+
+            </form>
+
+        </section>
+
+        <section class="footer">
+
+            <div class="footer__contact">
+                <a class="contact__contact" href="contact/contact.html">Contact Me</a>
+                <a class="contact__github" href="https://github.com/Spucen1">GitHub</a>
+                <a class="contact__mail" href="mailto:samuel.caniga07@gmail.com"><span class="white">samuel.caniga07</span>@<span class="orange">gmail.com</span></a>
+            </div>
+
+            <div class="footer__line"></div>
+
+            <div class="footer__credits">
+                <p class="footer__credits__text"><span class="grey">By</span> <span class="white">Samuel</span> Čaniga</p>
+                <p class="footer__credits__font"><span class="grey">Font:</span> <span class="orange">JetBrains</span> Mono</p>
+                <p class="footer__meme"><span class="idk">modern</span> ahh web page</p>
+            </div>
+            
+        </section>
+
+    </main>
+
 </body>
 </html>
