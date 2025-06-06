@@ -80,6 +80,8 @@ body {
 .header__img {
     position: absolute;
     z-index: 1;
+    background-image: url(../assets/img/trpim.JPG);
+    background-size: 100%;
 }
 
 .header__text {
@@ -303,7 +305,6 @@ body {
         width: 60%;
         margin-top: 15%;
         padding-top: 60%;
-        background-color: var(--dark-grey);
     }
 
     .header__text__introduction {
@@ -678,7 +679,6 @@ body {
         margin-top: 10%;
         margin-left: 17%;
         padding-top: 35%;
-        background-color: var(--dark-grey);
     }
 
     .header__text__introduction {
