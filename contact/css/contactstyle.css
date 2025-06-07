@@ -350,7 +350,7 @@ body {
 
 @media screen and (min-width: 769px) {
     .header {
-        height: 20vw;
+        height: 27vw;
     }
 
     .dezign {
@@ -396,7 +396,7 @@ body {
 
     .header__title {
         font-size: 5vw;
-        margin-top: 10%;
+        margin-top: 15%;
     }
 
     .contact__form {
@@ -449,6 +449,10 @@ body {
         transition: all 0.8s ease-in-out;
     }
 
+    .contact__form__input:not(:placeholder-shown) {
+        color: var(--orange-text);
+    }
+
     .contact__form__input:focus {
         background-color: black;
         outline: var(--orange-text) 2px solid;
@@ -484,6 +488,7 @@ body {
         outline: var(--orange-text) 2px solid;
         color: var(--orange-text);
         transition: all 0.8s ease-in-out;
+        cursor: pointer;
     }
 
     .footer {
