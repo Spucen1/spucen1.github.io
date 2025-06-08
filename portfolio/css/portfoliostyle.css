@@ -106,7 +106,29 @@ body {
 }
 
 .show__item {
-    background-color: var(--dark-grey);
+    background-color: var(--darkest-grey);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.show__item__1 {
+    background-image: url(../../assets/img/obyvackablender.png);
+}
+
+.show__item__2 {
+    background-image: url(../../assets/img/apartmanrender.png);
+    background-position: 40%;
+}
+
+.show__item__3 {
+    background-image: url(../../assets/img/Plechovka.png);
+}
+
+.show__item__4 {
+    background-image: url(../../assets/img/Vstupenka.png);
+    background-size: 60%;
+    background-position-y: 70%;
 }
 
 .footer {
@@ -163,7 +185,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .header {
-        height: 75vw;
+        height: 40vw;
     }
 
     .menu {
@@ -198,6 +220,29 @@ body {
         left: 0;
         transform: translateX(-6%);
         transform-origin: center;
+    }
+
+    .show__side {
+        display: none;
+    }
+
+    .show__item {
+        width: 40vw;
+        height: 50vw;
+        margin: 2vw;
+        border-radius: 2vw;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .show__item:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .show__item.active {
+        transform: scale(1.5);
+        transition: all 0.3s ease-in-out;
     }
 
     .footer {

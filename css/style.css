@@ -80,7 +80,7 @@ body {
 .header__img {
     position: absolute;
     z-index: 1;
-    background-image: url(../assets/img/trpim.JPG);
+    background-color: var(--dark-grey);
     background-size: 100%;
 }
 
