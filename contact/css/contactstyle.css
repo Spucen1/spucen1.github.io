@@ -73,12 +73,6 @@ body {
     position: relative;
 }
 
-.dezign {
-    color: var(--main-text);
-    position: absolute;
-    background-color: var(--darkest-grey);
-}
-
 .menu__list {
     margin: 0;
     display: flex;
@@ -181,13 +175,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .header {
-        height: 75vw;
-    }
-
-    .dezign {
-        font-size: 9vw;
-        width: 34vw;
-        height: 34vw;
+        height: 50vw;
     }
 
     .menu {
@@ -226,7 +214,7 @@ body {
 
     .header__title {
         font-size: 11vw;
-        margin-top: 50%;
+        margin-top: 20%;
     }
 
     .contact__form__input {
@@ -350,14 +338,7 @@ body {
 
 @media screen and (min-width: 769px) {
     .header {
-        height: 27vw;
-    }
-
-    .dezign {
-        width: 15vw;
-        height: 16vw;
-        font-size: 4vw;
-        margin-left: 14%;
+        height: 20vw;
     }
 
     .menu {
@@ -396,7 +377,7 @@ body {
 
     .header__title {
         font-size: 5vw;
-        margin-top: 15%;
+        margin-top: 9%;
     }
 
     .contact__form {
