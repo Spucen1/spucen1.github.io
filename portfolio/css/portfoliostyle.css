@@ -84,6 +84,19 @@ body {
     text-decoration: none;
 }
 
+.show {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.show__item {
+
+    background-color: var(--dark-grey);
+}
+
 .footer {
     background-color: var(--darkest-grey);
 }
@@ -229,7 +242,7 @@ body {
 
 @media screen and (min-width: 769px) {
     .header {
-        height: 45vw;
+        height: 15vw;
     }
 
     .menu {
@@ -264,6 +277,16 @@ body {
         left: 0;
         transform: translateX(-5%);
         transform-origin: center;
+    }
+
+    .show {
+        
+    }
+
+    .show__item {
+        width: 40vw;
+        height: 40vw;
+        margin: 2%;
     }
 
     .footer {
