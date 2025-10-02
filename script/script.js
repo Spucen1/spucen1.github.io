@@ -121,64 +121,94 @@ function description() {
     }
 }
 
-window.onload = () => {
-    if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-    }
-    window.scrollTo(0, 0);
-    introduction();
-};
+window.onload = introduction
 
-const boxLike = document.querySelector('.about__text__like');
-const boxTools = document.querySelector('.about__text__tools');
-const boxFuture = document.querySelector('.about__text__future');
-const boxLine = document.querySelector('.about__text__line');
-const boxLineDelay = document.querySelector('.about__text__line__delay');
+const section1 = document.querySelectorAll(".tools");
+const section2 = document.querySelectorAll(".learning");
+const sections = [...section1, ...section2];
 
-  function aboutTextAnimaton() {
-    const boxLikeTop = boxLike.getBoundingClientRect().top;
-    const boxTriggerPoint = window.innerHeight * 0.5;
+// === Scroll Speed & Direction Tracking ===
+let lastScrollY = window.scrollY;
+let lastTimestamp = performance.now();
+let scrollSpeed = 0;
+let scrollDirection = "down";
 
-    if (boxLikeTop < boxTriggerPoint) {
-        boxLike.classList.add('active');
-        boxLine.classList.add('active');
+function updateScrollSpeed() {
+  const currentY = window.scrollY;
+  const currentTime = performance.now();
+  const deltaY = currentY - lastScrollY;
+  const deltaTime = currentTime - lastTimestamp;
 
-        setTimeout(() => {
-            boxTools.classList.add('active');
-            boxLineDelay.classList.add('active');
-        }, 500);
-        
-        setTimeout(() => {
-            boxFuture.classList.add('active');
-        }, 1000);
-    }
+  scrollSpeed = deltaY / deltaTime;
+  scrollDirection = deltaY > 0 ? "down" : deltaY < 0 ? "up" : scrollDirection;
+
+  lastScrollY = currentY;
+  lastTimestamp = currentTime;
+
+  requestAnimationFrame(updateScrollSpeed);
+}
+updateScrollSpeed();
+
+// === Custom Smooth Scroll Animation ===
+function scrollToElement(target, duration = 800, easing = easeInOutQuad) {
+  const start = window.pageYOffset;
+  const end = target.getBoundingClientRect().top + start - (window.innerHeight / 2) + (target.offsetHeight / 2);
+  const distance = end - start;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = easing(timeElapsed, start, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
   }
 
-
-const windowHeight = window.innerHeight;
-const documentHeight = document.documentElement.scrollHeight;
-
-elementTools = document.querySelector('.tools');
-
-function scrollToolsAnimation() {
-    let scrollPositionTools = window.scrollY;
-    if (scrollPositionTools / (documentHeight - windowHeight) > 0.4) {
-        if (elementTools.classList.contains('active')) return;
-        elementTools.classList.add('active');
-    }
+  requestAnimationFrame(animation);
 }
 
-
-elementLearning = document.querySelector('.learning');
-
-function scrollLearningAnimation() {
-    let scrollPositionLearning = window.scrollY;
-    if (scrollPositionLearning / (documentHeight - windowHeight) > 0.7) {
-        elementLearning.classList.add('active');
-    }
+// === Easing Functions ===
+function easeInOutQuad(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c / 2 * t * t + b;
+  t--;
+  return -c / 2 * (t * (t - 2) - 1) + b;
 }
-window.addEventListener('scroll', () => {
-    scrollLearningAnimation();
-    scrollToolsAnimation();
-    aboutTextAnimaton();
-})
+
+function easeOutCubic(t, b, c, d) {
+  t /= d;
+  t--;
+  return c * (t * t * t + 1) + b;
+}
+
+// === Intersection Observer ===
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (
+      entry.isIntersecting &&
+      !entry.target.classList.contains("active") &&
+      scrollDirection === "down"
+    ) {
+      entry.target.classList.add("active");
+
+      const start = window.scrollY;
+      const end = entry.target.getBoundingClientRect().top + start - (window.innerHeight / 2) + (entry.target.offsetHeight / 2);
+      const distance = Math.abs(end - start);
+
+      const speed = Math.min(Math.abs(scrollSpeed), 2); // cap the speed
+      const baseDuration = 1000;
+      const duration = baseDuration / (speed + 0.5); // faster scroll = shorter duration
+      const easing = speed > 1 ? easeOutCubic : easeInOutQuad;
+
+      scrollToElement(entry.target, duration, easing);
+
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.7
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
