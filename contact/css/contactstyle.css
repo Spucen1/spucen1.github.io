@@ -39,7 +39,7 @@
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px #000 inset;
-    -webkit-text-fill-color: var(--main-text);
+    -webkit-text-fill-color: var(--orange-text);
     transition: background-color 9999s ease-in-out 0s;
 }
 
@@ -71,12 +71,6 @@ body {
 
 .header {
     position: relative;
-}
-
-.dezign {
-    color: var(--main-text);
-    position: absolute;
-    background-color: var(--darkest-grey);
 }
 
 .menu__list {
@@ -181,13 +175,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .header {
-        height: 75vw;
-    }
-
-    .dezign {
-        font-size: 9vw;
-        width: 34vw;
-        height: 34vw;
+        height: 50vw;
     }
 
     .menu {
@@ -226,7 +214,7 @@ body {
 
     .header__title {
         font-size: 11vw;
-        margin-top: 50%;
+        margin-top: 20%;
     }
 
     .contact__form__input {
@@ -353,13 +341,6 @@ body {
         height: 20vw;
     }
 
-    .dezign {
-        width: 15vw;
-        height: 16vw;
-        font-size: 4vw;
-        margin-left: 14%;
-    }
-
     .menu {
         padding-top: 1%;
     }
@@ -396,7 +377,7 @@ body {
 
     .header__title {
         font-size: 5vw;
-        margin-top: 10%;
+        margin-top: 9%;
     }
 
     .contact__form {
@@ -449,6 +430,10 @@ body {
         transition: all 0.8s ease-in-out;
     }
 
+    .contact__form__input:not(:placeholder-shown) {
+        color: var(--orange-text);
+    }
+
     .contact__form__input:focus {
         background-color: black;
         outline: var(--orange-text) 2px solid;
@@ -484,6 +469,7 @@ body {
         outline: var(--orange-text) 2px solid;
         color: var(--orange-text);
         transition: all 0.8s ease-in-out;
+        cursor: pointer;
     }
 
     .footer {
