@@ -1,5 +1,7 @@
 # Web Portfolio
 
+[Web page](https://spucen1.github.io)
+
 This repository contains the code for my personal web portfolio. It showcases my web development projects and design work.
 
 ## Projects
